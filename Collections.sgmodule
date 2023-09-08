@@ -52,8 +52,7 @@ Ps = type=http-response,pattern=^https?:\/\/lcs-mobile-cops\.adobe\.io\/mobile_p
 #************************************#
 # 彩云天气
 # hostname = *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn
-彩云天气 = type=http-response,pattern=^https?:\/\/(biz|wrapper)\.cyapi\.cn\/(.+\/(user.+|visitors|activity)|p\/v\d\/vip_info),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyun.js
-
+彩云天气 = type=http-response,pattern=^https?:\/\/(biz|wrapper)\.cyapi\.cn\/(.+\/(user.+|visitors|activity)|p\/v\d\/vip_info),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/bhcm1011/bhht/main/caiyun.js
 #************************************#
 # Emby(解锁播放权限)
 # hostname = mb3admin.com
