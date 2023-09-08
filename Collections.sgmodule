@@ -141,4 +141,4 @@ Documents = type=http-response,pattern=^https:\/\/license\.pdfexpert\.com\/api\/
 
 [MITM]
 
-hostname = %APPEND% buy.itunes.apple.com, api.revenuecat.com, 
+hostname = %APPEND% buy.itunes.apple.com, api.revenuecat.com, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, license.pdfexpert.com, api.hujuvod.com, api.polaxiong.com, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn,
