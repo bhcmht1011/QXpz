@@ -132,7 +132,12 @@ ttern=^https?:\/\/api\.boohee\.com\/app-interface\/.+\/user\/user_info,requires-
 # hostname = api.hujuvod.com
 人人视频 = type=http-response,pattern=^https?:\/\/api\.hujuvod\.com\/(user\/personal\/information|app\/drama\/page),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/renrenshipin.js
 
+#************************************#
+# Documents
+
+Documents = type=http-response,pattern=^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/documents\/subscription\/refresh url script-request-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Documents.js
+# hostname = license.pdfexpert.com
 
 #************************************#
 [MITM]
-hostname = %APPEND% buy.itunes.apple.com, api.revenuecat.com, my.countingthings.com,api.hujuvod.com,api.polaxiong.com,api.owhealth.com,*.api.moji.com,schedule-api.julanling.com,.xiangha.com,api.boohee.com,*.api.moji.com，schedule-api.julanling.com，*.xiangha.com，api.boohee.，*.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com，*.meiyan.com，*.meiyan.com，share.dianshihome.com, api.gaoqingdianshi.com, 123.56.125.184，api.meiease.cn，*.aliyundrive.com, *.alipan.com，pan.baidu.com，*.camscanner.com, *.intsig.net，mb3admin.com，*.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn，lcs-mobile-cops.adobe.io，restore-access.indream.app,,,,,,,,,,,
+hostname = %APPEND% buy.itunes.apple.com, api.revenuecat.com, my.countingthings.com,api.hujuvod.com,api.polaxiong.com,api.owhealth.com,*.api.moji.com,schedule-api.julanling.com,.xiangha.com,api.boohee.com,*.api.moji.com，schedule-api.julanling.com，*.xiangha.com，api.boohee.，*.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com，*.meiyan.com，*.meiyan.com，share.dianshihome.com, api.gaoqingdianshi.com, 123.56.125.184，api.meiease.cn，*.aliyundrive.com, *.alipan.com，pan.baidu.com，*.camscanner.com, *.intsig.net，mb3admin.com，*.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn，lcs-mobile-cops.adobe.io，restore-access.indream.app,license.pdfexpert.com,,,
