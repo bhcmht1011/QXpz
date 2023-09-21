@@ -25,15 +25,92 @@ https://apps.apple.com/cn/app/id1539097448
 # ～ RevenueCat @ddgksf2013
 ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) url script-echo-response https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js
 ^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ url request-header (\r\n)X-RevenueCat-ETag:.+(\r\n) request-header $1X-RevenueCat-ETag:$2
+# Revenuecat解锁系列
+# hostname = api.revenuecat.com
+^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js
+^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js
+
+#************************************#
+# iTunes解锁系列
+# hostname = buy.itunes.apple.com
+^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js
+
+#************************************#
+# Nicegram
+# hostname = restore-access.indream.app
+^https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} url echo-response text/json echo-response https://raw.githubusercontent.com/chxm1023/Rewrite/main/Nicegram.js
+
+#************************************#
+# 彩云天气
+# hostname = *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn
+^https?:\/\/(biz|wrapper)\.cyapi\.cn\/(.+\/(user.+|visitors|activity)|p\/v\d\/vip_info) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyun.js
+
+#************************************#
+# Emby(解锁播放权限)
+# hostname = mb3admin.com
+^https?:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/embycrack.js
+
+#************************************#
+# Picsart美易_图片视频编辑器
+# hostname = api.meiease.cn
+^https?:\/\/api\.meiease\.cn\/shop\/subscription\/(validate|apple\/purchases) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/picsart.js
+
+#************************************#
+# 电视家
+# hostname = share.dianshihome.com, api.gaoqingdianshi.com, 123.56.125.184
+^http[s]?:\/\/(share\.dianshihome\.com\/api\/user\/base\/info|123\.56\.125\.184\/api\/.+\/user\/info|api\.gaoqingdianshi\.com\/api\/ad\/mobile\/config) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/dsj.js
+
+#************************************#
+# 美颜相机
+# hostname = *.meiyan.com
+^https?:\/\/(api|community)\.meiyan\.com\/(vip|v\d)\/(user_center|user_info|user\/(.*?)) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/myxj.js
+
+#************************************#
+# 美图秀秀
+# hostname = *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com
+^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxx.js
+
+#************************************#
+# 薄荷健康
+# hostname = api.boohee.com
+^https?:\/\/api\.boohee\.com\/app-interface\/.+\/user\/user_info url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/bohejiankang.js
+
+#************************************#
+# 菜谱大全，烘焙小屋，香哈菜谱
+# hostname = *.xiangha.com
+^https?:\/\/api.*\.xiangha\.com url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/caipu.js
+
+#************************************#
+# 排班日历-倒班助手
+# hostname = schedule-api.julanling.com
+^https?:\/\/schedule-api\.julanling\.com\/api\/(get_member_info|vip_detail) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/paibanrili.js
+
+#************************************#
+# 女性日记Flo
+# hostname = api.owhealth.com
+^https:\/\/api\.owhealth\.com\/subscriptions\/v1\/apple url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Flo.js
+
+#************************************#
+# 训记
+# hostname = xunji.gxzckj.com
+^https:\/\/xunji\.gxzckj\.com\/whole_user_info_v3 url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/xunji.js
+
+#************************************#
+# 泼辣修图
+# hostname = api.polaxiong.com
+^https?:\/\/api\.polaxiong\.com\/.+\/payments\/(profiles\/.+\/subscription|appleiap\/receipts\/confirmation) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/pola.js
+
+#************************************#
+# 心脏+
+# hostname = api.995120.cn
+^https:\/\/api\.995120\.cn\/mini\/api\/appleplus url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/xinzang.js
+
 
 [mitm]
 
 hostname=api.revenuecat.com
 
 ***********************************/
-
-
-
 
 //固定头部
 var ua = $request.headers['User-Agent'] || $request.headers['user-agent'];
