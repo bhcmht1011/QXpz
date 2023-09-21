@@ -105,10 +105,15 @@ https://apps.apple.com/cn/app/id1539097448
 # hostname = api.995120.cn
 ^https:\/\/api\.995120\.cn\/mini\/api\/appleplus url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/xinzang.js
 
+# exping地图标记
+^https?:\/\/api\.expingworld\.com\/users url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/exping.js
+
+# 闪念
+^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes/shannian.js
 
 [mitm]
 
-hostname=api.revenuecat.com
+hostname=api.revenuecat.com,api.expingworld.com,buy.itunes.apple.com,,,,,,,,,,,,,,,,
 
 ***********************************/
 
