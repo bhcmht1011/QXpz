@@ -111,9 +111,14 @@ https://apps.apple.com/cn/app/id1539097448
 # 闪念
 ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes/shannian.js
 
+# > TouchRetouch 解锁永久 Plus
+^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/\$RCAnonymousID%3A\w{32}|receipts)$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/TouchRetouchPlusCrack.js
+
+
+
 [mitm]
 
-hostname=api.revenuecat.com,api.expingworld.com,buy.itunes.apple.com,,,,,,,,,,,,,,,,
+hostname=api.revenuecat.com,api.expingworld.com,buy.itunes.apple.com,api.revenuecat.com,api.polaxiong.com,api.995120.cn,api.owhealth.com,,,,,,,,,,,,
 
 ***********************************/
 
