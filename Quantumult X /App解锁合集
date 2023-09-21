@@ -118,7 +118,7 @@ https://apps.apple.com/cn/app/id1539097448
 
 [mitm]
 
-hostname=api.revenuecat.com,api.expingworld.com,buy.itunes.apple.com,api.revenuecat.com,api.polaxiong.com,api.995120.cn,api.owhealth.com,,,,,,,,,,,,
+hostname=api.revenuecat.com,api.expingworld.com,buy.itunes.apple.com,api.revenuecat.com,api.polaxiong.com,api.995120.cn,api.owhealth.com,api.revenuecat.com,buy.itunes.apple.com,restore-access.indream.app,*.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn,mb3admin.com,api.meiease.cn,api.meiease.cn,*.meiyan.com,api.boohee.com,*.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com,schedule-api.julanling.com,*.xiangha.com,schedule-api.julanling.com,
 
 ***********************************/
 
