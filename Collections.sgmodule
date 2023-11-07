@@ -130,14 +130,18 @@ ttern=^https?:\/\/api\.boohee\.com\/app-interface\/.+\/user\/user_info,requires-
 # 人人视频
 # hostname = api.hujuvod.com
 Subtrack = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/Guding88/Script/main/Subtrack.js
-^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/Guding88/Script/main/Subtrack.js
+Subtrack = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/Guding88/Script/main/Subtrack.js
 
+> 非一次性
 #************************************#
 # Documents
 # hostname = license.pdfexpert.com
 Documents = type=http-response,pattern=^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/documents\/subscription\/refresh url script-request-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Documents.js
 
-
+#************************************#
+# 灵感-记录灵感/兴趣
+# 灵感-记录灵感/兴趣 = buy.itunes.apple.com
+Documents = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/linggan.js
 
 [MITM]
 
