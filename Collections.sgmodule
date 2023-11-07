@@ -1,4 +1,4 @@
-#!name=App解锁合集
+##!name=App解锁合集
 #!desc=chxm1023 转载请说明
 
 #============【使用说明】==============#
@@ -129,7 +129,8 @@ ttern=^https?:\/\/api\.boohee\.com\/app-interface\/.+\/user\/user_info,requires-
 #************************************#
 # 人人视频
 # hostname = api.hujuvod.com
-人人视频 = type=http-response,pattern=^https?:\/\/api\.hujuvod\.com\/(user\/personal\/information|app\/drama\/page),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/renrenshipin.js
+Subtrack = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/Guding88/Script/main/Subtrack.js
+^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/Guding88/Script/main/Subtrack.js
 
 #************************************#
 # Documents
