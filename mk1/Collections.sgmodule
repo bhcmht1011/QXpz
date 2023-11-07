@@ -1,0 +1,69 @@
+#!name=App解锁合集
+#!desc=chxm1023 转载请说明
+#!TG频道：https://t.me/chxm1023
+# 📢 频道：https://t.me/chxm1023
+# 👥 群组：https://t.me/chxm1023_Chat
+
+#============【使用说明】==============#
+# 使用声明：作者并未参与任何形式的金钱交易，仅限测试和学习，请勿转载与贩卖，下载使用后24小时请删除⚠️⚠️⚠️⚠️⚠️
+
+# 使用方法：先开脚本再打开App，自动会生效，如果无效就关了重开或者按一下恢复购买，在还不行就卸载App重新安装！最后还不行的话就是脚本失效了！
+
+# 更新日期：2023-10-31
+
+# 已解锁App下载地址：https://too.st/chxm1023
+
+#=============UserScript=============#
+[URL Rewrite]
+# 彩云天气去广告
+^https?:\/\/ad\.(caiyunapp|cyapi)\.(cn|com) - reject
+# 酷我音乐_AdBlock
+^https?:\/\/rich\.kuwo\.cn\/AdService\/kaiping\/.+ - reject
+# 酷我音乐_AdBlock
+^https?:\/\/.+\.kwcdn\.kuwo\.cn\/star\/upload\/.+ - reject
+# 酷我音乐_AdBlock
+^https?:\/\/mobilead\.kuwo\.cn\/EcomResourceServer\/Ad - reject
+# 酷我音乐_添加已购音乐
+^https?:\/\/.*\.kuwo\.cn\/music\.pay\?uid\=\d+ http://musicpay.kuwo.cn/music.pay?uid=2 302
+# 蓝基因
+^https?:\/\/tk\.lanjiyin\.com\.cn\/img - reject
+# 靓机汇顶部滚屏
+^https?:\/\/ljh\.dianxiaoman\.com\/ljh\/api\/home\/getHomeList - reject
+# 墨迹天气横幅广告
+^http?:\/\/oss4bpc\.moji\.com\/.\d+\/.\d+\/.\d+\/.+\.jpg - reject
+
+[Map Local]
+# 彩云天气去广告
+^http:\/\/adx\.sogaha\.cn\/sdk\/ad\/get data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+# 酷我听书_Blockad
+https?:\/\/audiobookpay\.kuwo\.cn/a\.p\?op=get_advertright data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+# 酷我听书_Blockad
+https?:\/\/omp-audiobookpay\.lrts\.me\/a\.p\?op=get_advertright data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+# 云听开屏广告/浮窗
+^https?:\/\/ytmsout\.radio\.cn\/publish\/recScreen\/getLoadPage data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+# 牛津高阶词典-去除首页下方广告
+^https:\/\/oxadmin\.cp\.com\.cn\/api\/(hot\/index|advertise\/banner) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+# iScreen小组件-辅助解锁
+^https?:\/\/pay\.kuso\.xyz\/pay\/pay-check data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+#FT中文网AD
+^https?:\/\/ftmailbox\.cn\/ad_impression\/.+ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+[Script]
+# Revenuecat解锁系列
+# hostname = api.revenuecat.com
+revenuecat1 = type=http-response,pattern= ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js
+revenuecat2 = type=http-request,pattern= ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=0,max-size=0,script-path= https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js,script-update-interval=0
+
+#************************************#
+# iTunes解锁系列
+# hostname = buy.itunes.apple.com
+iTunes = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js
+
+#************************************#
+# Nicegram
+# hostname = restore-access.indream.app
+Nicegram = type=http-response,pattern=^https?:\/\/restore-access\.indream\.app\/restoreAccess,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/nicegram.js
+
+#************************************#
+[MITM]
+hostname = %APPEND% buy.itunes.apple.com, api.revenuecat.com,restore-access.indream.app
