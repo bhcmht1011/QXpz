@@ -62,14 +62,7 @@ Nicegram = type=http-response,pattern=^https?:\/\/restore-access\.indream\.app\/
 #************************************#
 # 灵感-记录灵感和兴趣
 # hostname = buy.itunes.apple.com
-iTunes = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/linggan.js
-
-#************************************#
-# Subtrack
-# hhostnam = api.revenuecat.com
-Subtrack_4 = type=http-request, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Guding88/Script/main/Subtrack.js, timeout=60, script-update-interval=0
-
-Subtrack_3 = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/Guding88/Script/main/Subtrack.js, timeout=60, script-update-interval=0
+iTunes = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/
 
 #************************************#
 [MITM]
