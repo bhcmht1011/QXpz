@@ -1,5 +1,5 @@
-#!name=App解锁合集
-#!desc=自用APP解锁合集
+#!name=App解锁合集1
+#!desc=APP解锁合集1
 
 #============【使用说明】==============#
 # 使用声明：作者并未参与任何形式的金钱交易，仅限测试和学习，请勿转载与贩卖，下载使用后24小时请删除⚠️⚠️⚠️⚠️⚠️
@@ -8,40 +8,7 @@
 
 # 已解锁App下载地址：https://too.st/chxm1023
 
-#=============UserScript=============#
-[URL Rewrite]
-# 彩云天气去广告
-^https?:\/\/ad\.(caiyunapp|cyapi)\.(cn|com) - reject
-# 酷我音乐_AdBlock
-^https?:\/\/rich\.kuwo\.cn\/AdService\/kaiping\/.+ - reject
-# 酷我音乐_AdBlock
-^https?:\/\/.+\.kwcdn\.kuwo\.cn\/star\/upload\/.+ - reject
-# 酷我音乐_AdBlock
-^https?:\/\/mobilead\.kuwo\.cn\/EcomResourceServer\/Ad - reject
-# 酷我音乐_添加已购音乐
-^https?:\/\/.*\.kuwo\.cn\/music\.pay\?uid\=\d+ http://musicpay.kuwo.cn/music.pay?uid=2 302
-# 蓝基因
-^https?:\/\/tk\.lanjiyin\.com\.cn\/img - reject
-# 靓机汇顶部滚屏
-^https?:\/\/ljh\.dianxiaoman\.com\/ljh\/api\/home\/getHomeList - reject
-# 墨迹天气横幅广告
-^http?:\/\/oss4bpc\.moji\.com\/.\d+\/.\d+\/.\d+\/.+\.jpg - reject
 
-[Map Local]
-# 彩云天气去广告
-^http:\/\/adx\.sogaha\.cn\/sdk\/ad\/get data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-# 酷我听书_Blockad
-https?:\/\/audiobookpay\.kuwo\.cn/a\.p\?op=get_advertright data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-# 酷我听书_Blockad
-https?:\/\/omp-audiobookpay\.lrts\.me\/a\.p\?op=get_advertright data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-# 云听开屏广告/浮窗
-^https?:\/\/ytmsout\.radio\.cn\/publish\/recScreen\/getLoadPage data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-# 牛津高阶词典-去除首页下方广告
-^https:\/\/oxadmin\.cp\.com\.cn\/api\/(hot\/index|advertise\/banner) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-# iScreen小组件-辅助解锁
-^https?:\/\/pay\.kuso\.xyz\/pay\/pay-check data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-#FT中文网AD
-^https?:\/\/ftmailbox\.cn\/ad_impression\/.+ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 
 [Script]
 # Revenuecat解锁系列
@@ -62,8 +29,60 @@ Nicegram = type=http-response,pattern=^https?:\/\/restore-access\.indream\.app\/
 #************************************#
 # 灵感-记录灵感和兴趣
 # hostname = buy.itunes.apple.com
-iTunes = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/
+iTunes = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes/linggan.js
+
+
+#************************************#
+# 心脏+
+# hostname = api.995120.cn
+心脏+ = type=http-response,pattern=^https:\/\/api\.995120\.cn\/mini\/api\/appleplus,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/xinzang.js
+
+#************************************#
+# Tripsy-旅行规划者
+# hostname = firstclass.tripsy.app
+Tripsy = type=http-response,pattern=^https?:\/\/firstclass\.tripsy\.app\/api\/.+\/receipt\/update,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/tripsy.js
+
+#************************************#
+# 泼辣修图
+# hostname = api.polaxiong.com
+泼辣修图 = type=http-response,pattern=^https?:\/\/api\.polaxiong\.com\/.+\/payments\/(profiles\/.+\/subscription|appleiap\/receipts\/confirmation),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/pola.js
+
+#************************************#
+# 女性日记Flo
+# hostname = api.owhealth.com
+女性日记Flo = type=http-response,pattern=^https:\/\/api\.owhealth\.com\/subscriptions\/v\d\/apple,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Flo.js
+
+#************************************#
+# 训记
+# hostname = xunji.gxzckj.com
+训记 = type=http-response,pattern=^https:\/\/xunji\.gxzckj\.com\/whole_user_info_v3,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/xunji.js
+
+#************************************#
+# 薄荷健康
+# hostname = api.boohee.com
+薄荷健康 = type=http-response,pattern=^https?:\/\/api\.boohee\.com\/app-interface\/.+\/user\/user_info,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/bohejiankang.js
+
+#************************************#
+# 菜谱大全，烘焙小屋，香哈菜谱
+# hostname = *.xiangha.com
+菜谱大全系列 = type=http-response,pattern=^https?:\/\/api.*\.xiangha\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caipu.js
+
+#************************************#
+# 排班日历-倒班助手
+# hostname = schedule-api.julanling.com
+排班日历 = type=http-response,pattern=^https?:\/\/schedule-api\.julanling\.com\/api\/(get_member_info|vip_detail),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/paibanrili.js
+
+#************************************#
+# 美颜相机
+# hostname = *.meiyan.com
+美颜相机 = type=http-response,pattern=^https?:\/\/(api|community)\.meiyan\.com\/(vip|v\d)\/(user_center|user_info|user\/(.*?)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/myxj.js
+
+#************************************#
+# 美图秀秀
+# hostname = *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com
+美图秀秀 = type=http-response,pattern=^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxx.js
+    
 
 #************************************#
 [MITM]
-hostname = %APPEND% buy.itunes.apple.com, api.revenuecat.com,restore-access.indream.app
+hostname = %APPEND% buy.itunes.apple.com, api.revenuecat.com, restore-access.indream.app, api.polaxiong.com, firstclass.tripsy.app, api.995120.cn,  api.owhealth.com, xunji.gxzckj.com, api.boohee.com, *.xiangha.com, schedule-api.julanling.com, *.meiyan.com,  *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, , , , , , 
