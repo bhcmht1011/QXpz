@@ -67,8 +67,9 @@ iTunes = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyRe
 #************************************#
 # Subtrack
 # hhostnam = api.revenuecat.com
-Subtrack = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/Guding88/Script/main/Subtrack.js, timeout=60, script-update-interval=0
-Subtrack = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Guding88/Script/main/Subtrack.js, timeout=60, script-update-interval=0
+Subtrack_4 = type=http-request, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Guding88/Script/main/Subtrack.js, timeout=60, script-update-interval=0
+
+Subtrack_3 = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/Guding88/Script/main/Subtrack.js, timeout=60, script-update-interval=0
 
 #************************************#
 [MITM]
