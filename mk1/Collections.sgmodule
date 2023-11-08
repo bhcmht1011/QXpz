@@ -62,7 +62,7 @@ Nicegram = type=http-response,pattern=^https?:\/\/restore-access\.indream\.app\/
 #************************************#
 # 灵感-记录灵感和兴趣
 # hostname = buy.itunes.apple.com
-iTunes =^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/linggan.js
+iTunes = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/linggan.js
 
 #************************************#
 [MITM]
