@@ -20,4 +20,4 @@ Revenuecat清缓存= type=http-request,requires-body=0,pattern=^https?:\/\/api\.
 
 [MITM]
 
-hostname = %APPEND% buy.itunes.apple.com, api.revenuecat.com, 
+hostname = %APPEND% buy.itunes.apple.com, api.revenuecat.com, api.getdailyart.com
