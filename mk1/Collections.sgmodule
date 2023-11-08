@@ -1,15 +1,10 @@
 #!name=App解锁合集
 #!desc=chxm1023 转载请说明
-#!TG频道：https://t.me/chxm1023
-# 📢 频道：https://t.me/chxm1023
-# 👥 群组：https://t.me/chxm1023_Chat
 
 #============【使用说明】==============#
 # 使用声明：作者并未参与任何形式的金钱交易，仅限测试和学习，请勿转载与贩卖，下载使用后24小时请删除⚠️⚠️⚠️⚠️⚠️
 
 # 使用方法：先开脚本再打开App，自动会生效，如果无效就关了重开或者按一下恢复购买，在还不行就卸载App重新安装！最后还不行的话就是脚本失效了！
-
-# 更新日期：2023-10-31
 
 # 已解锁App下载地址：https://too.st/chxm1023
 
@@ -63,6 +58,11 @@ iTunes = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyR
 # Nicegram
 # hostname = restore-access.indream.app
 Nicegram = type=http-response,pattern=^https?:\/\/restore-access\.indream\.app\/restoreAccess,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/nicegram.js
+
+#************************************#
+# 灵感-记录灵感和兴趣
+# hostname = buy.itunes.apple.com
+iTunes =^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/linggan.js
 
 #************************************#
 [MITM]
