@@ -1,0 +1,23 @@
+#!name=APP脚本合集2
+#!desc=22222222222
+#!homepage=https://github.com/Guding88/Script/blob/main/Readme.md
+
+[Script]
+
+# iTunes合集
+iTunes合集= type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_iTunes.js
+
+# Revenuecat合集
+Revenuecat合集= type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$),script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js
+Revenuecat清缓存= type=http-request,requires-body=0,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$),script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js
+
+
+# 每日艺术
+每日艺术= type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.getdailyart\.com\/api\/check-logged,script-path=https://raw.githubusercontent.com/Guding88/Script/main/meiriyishu.js
+
+
+
+
+[MITM]
+
+hostname = %APPEND% buy.itunes.apple.com, api.revenuecat.com, 
