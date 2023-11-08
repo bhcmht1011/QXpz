@@ -12,12 +12,12 @@ Revenuecat合集= type=http-response,requires-body=1,max-size=0,pattern=^https?:
 Revenuecat清缓存= type=http-request,requires-body=0,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$),script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js
 
 
-# 每日艺术
-每日艺术= type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.getdailyart\.com\/api\/check-logged,script-path=https://raw.githubusercontent.com/Guding88/Script/main/meiriyishu.js
+# Subtrack
+Subtrack= type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.getdailyart\.com\/api\/check-logged,script-path=https://raw.githubusercontent.com/bhcmht1011/txsr/main/Subtrack.js
 
 
 
 
 [MITM]
 
-hostname = %APPEND% buy.itunes.apple.com, api.revenuecat.com, api.getdailyart.com
+hostname = %APPEND% buy.itunes.apple.com, api.revenuecat.com, 
