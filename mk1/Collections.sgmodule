@@ -50,7 +50,7 @@ Tripsy = type=http-response,pattern=^https?:\/\/firstclass\.tripsy\.app\/api\/.+
 #************************************#
 # 女性日记Flo
 # hostname = api.owhealth.com
-女性日记Flo = type=http-response,pattern=^https:\/\/api\.owhealth\.com\/subscriptions\/v\d\/apple,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Flo.js
+女性日记Flo = type=http-response,pattern=^https:\/\/api\.owhealth\.com\/subscriptions\/v\d\/apple,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/bhcm1011/bhht/main/Flo.js
 
 #************************************#
 # 训记
