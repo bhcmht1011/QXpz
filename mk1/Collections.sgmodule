@@ -81,8 +81,16 @@ Tripsy = type=http-response,pattern=^https?:\/\/firstclass\.tripsy\.app\/api\/.+
 # 美图秀秀
 # hostname = *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com
 美图秀秀 = type=http-response,pattern=^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxx.js
+
+#************************************#
+#彩云天气 
+hostname = *.cyapi.cn, *.caiyunapp.com
+# VIP信息
+^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners)|p\/v\d\/(vip_info|user_info)) url script-response-body https://raw.githubusercontent.com/bhcmht1011/txsr/main/caiyuntianqi.js
+# SVIP地图-48小时预报(方法来源:苍井灰灰)
+^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images) url script-request-header https://raw.githubusercontent.com/bhcmht1011/txsr/main/caiyuntianqi.j
     
 
 #************************************#
 [MITM]
-hostname = %APPEND% buy.itunes.apple.com, api.revenuecat.com, restore-access.indream.app, api.polaxiong.com, firstclass.tripsy.app, api.995120.cn,  api.owhealth.com, xunji.gxzckj.com, api.boohee.com, *.xiangha.com, schedule-api.julanling.com, *.meiyan.com,  *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, , , , , , 
+hostname = %APPEND% buy.itunes.apple.com, api.revenuecat.com, restore-access.indream.app, api.polaxiong.com, firstclass.tripsy.app, api.995120.cn,  api.owhealth.com, xunji.gxzckj.com, api.boohee.com, *.xiangha.com, schedule-api.julanling.com, *.meiyan.com,  *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com,*.cyapi.cn, *.caiyunapp.com , , , , , 
