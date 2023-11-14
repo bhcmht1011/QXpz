@@ -76,21 +76,27 @@ Tripsy = type=http-response,pattern=^https?:\/\/firstclass\.tripsy\.app\/api\/.+
 # 美颜相机
 # hostname = *.meiyan.com
 美颜相机 = type=http-response,pattern=^https?:\/\/(api|community)\.meiyan\.com\/(vip|v\d)\/(user_center|user_info|user\/(.*?)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/myxj.js
-
 #************************************#
 # 美图秀秀
 # hostname = *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com
-美图秀秀 = type=http-response,pattern=^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/bhcmht1011/bhht/main/mtxx.js
+美图秀秀 = type=http-response,pattern=^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxx.js
 
 #************************************#
-#彩云天气 
-hostname = *.cyapi.cn, *.caiyunapp.com
-# VIP信息
-^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners)|p\/v\d\/(vip_info|user_info)) url script-response-body https://raw.githubusercontent.com/bhcmht1011/txsr/main/caiyuntianqi.js
-# SVIP地图-48小时预报(方法来源:苍井灰灰)
-^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images) url script-request-header https://raw.githubusercontent.com/bhcmht1011/txsr/main/caiyuntianqi.j
-    
+# 彩云天气
+# hostname = *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn
+彩云天气-SVIP会员 = type=http-response,pattern=^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners)|p\/v\d\/(vip_info|user_info)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js
+彩云天气-SVIP地图 = type=http-request,pattern=^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images),requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js
+            
+ #************************************#
+# 糖豆-广场舞教学视频
+# hostname = *.tangdou.com
+糖豆广场舞 = type=http-request,pattern=^https:\/\/.*\.tangdou\.com\/(?:\w*\/)?\d+\/\d+_\w+\.mp4\?sign=[\w-]+&t=\w+$,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Tangdou.js
+
+#************************************#
+# 灵兰中医
+# hostname = user.linglan.com
+灵兰中医 = type=http-response,pattern=^https?:\/\/user\.linglan\.com\/api\/personCenter\/getMyUser,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/linglanzhongyi.js
 
 #************************************#
 [MITM]
-hostname = %APPEND% buy.itunes.apple.com, api.revenuecat.com, restore-access.indream.app, api.polaxiong.com, firstclass.tripsy.app, api.995120.cn,  api.owhealth.com, xunji.gxzckj.com, api.boohee.com, *.xiangha.com, schedule-api.julanling.com, *.meiyan.com,  *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com,*.cyapi.cn, *.caiyunapp.com , , , , , 
+hostname = %APPEND% buy.itunes.apple.com, api.revenuecat.com, restore-access.indream.app, api.polaxiong.com, firstclass.tripsy.app, api.995120.cn,  api.owhealth.com, xunji.gxzckj.com, api.boohee.com, *.xiangha.com, schedule-api.julanling.com, *.meiyan.com,  *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com,*.cyapi.cn,*.caiyunapp.com,*.tangdou.com,user.linglan.com, , , 
